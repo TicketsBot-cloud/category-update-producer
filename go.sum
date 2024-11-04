@@ -7,6 +7,8 @@ github.com/TicketsBot/database v0.0.0-20241104184856-68c4146b3d22 h1:Z1nshXX+bop
 github.com/TicketsBot/database v0.0.0-20241104184856-68c4146b3d22/go.mod h1:mpVkDO8tnnWn1pMGEphVg6YSeGIhDwLAN43lBTkpGmU=
 github.com/TicketsBot/database v0.0.0-20241104185036-5607227e60cd h1:6LpdwG3GDAL7locbfs5J3Hp7hIKaMHAHXYIJEP4raCo=
 github.com/TicketsBot/database v0.0.0-20241104185036-5607227e60cd/go.mod h1:mpVkDO8tnnWn1pMGEphVg6YSeGIhDwLAN43lBTkpGmU=
+github.com/TicketsBot/database v0.0.0-20241104191206-ab1c764ff028 h1:wHwRLA5Goi9YV1UwwZoX5wFoOmNaLEpy0fkPbYzQReg=
+github.com/TicketsBot/database v0.0.0-20241104191206-ab1c764ff028/go.mod h1:mpVkDO8tnnWn1pMGEphVg6YSeGIhDwLAN43lBTkpGmU=
 github.com/caarlos0/env/v11 v11.2.2 h1:95fApNrUyueipoZN/EhA8mMxiNxrBwDa+oAZrMWl3Kg=
 github.com/caarlos0/env/v11 v11.2.2/go.mod h1:JBfcdeQiBoI3Zh1QRAWfe+tpiNTmDtcCj/hHHHMx0vc=
 github.com/cockroachdb/apd v1.1.0 h1:3LFP3629v+1aKXU5Q37mxmRxX/pIu1nijXydLShEq5I=

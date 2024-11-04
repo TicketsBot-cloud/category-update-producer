@@ -4,7 +4,7 @@ go 1.22
 
 require (
 	github.com/TicketsBot/common v0.0.0-20241104184641-e39c64bdcf3e
-	github.com/TicketsBot/database v0.0.0-20241104185036-5607227e60cd
+	github.com/TicketsBot/database v0.0.0-20241104191206-ab1c764ff028
 	github.com/caarlos0/env/v11 v11.2.2
 	github.com/getsentry/sentry-go v0.21.0
 	github.com/jackc/pgx/v4 v4.18.3

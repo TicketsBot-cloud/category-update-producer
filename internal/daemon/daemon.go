@@ -82,16 +82,17 @@ func (d *Daemon) RunOnce() {
 			continue
 		}
 
+		// If there is no pending category set, then disable the feature
+		if panel.PendingCategory == nil {
+			d.logger.Debug("No pending category set", zap.Uint64("guild_id", ticket.GuildId), zap.Int("ticket_id", ticket.TicketId))
+			continue
+		}
+
 		var newCategoryId uint64
 		switch ticket.NewStatus {
 		case model.TicketStatusOpen:
 			newCategoryId = panel.TargetCategory
 		case model.TicketStatusPending:
-			if panel.PendingCategory == nil {
-				d.logger.Debug("No pending category set", zap.Uint64("guild_id", ticket.GuildId), zap.Int("ticket_id", ticket.TicketId))
-				continue
-			}
-
 			newCategoryId = *panel.PendingCategory
 		}
 

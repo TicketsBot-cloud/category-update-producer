@@ -116,8 +116,9 @@ func (d *Daemon) RunOnce() {
 		)
 	}
 
-	if time.Now().Sub(start) > (d.config.ExecutionTimeout / 2) {
-		d.logger.Warn("Execution took more than 50% of the timeout", zap.Duration("duration", time.Now().Sub(start)))
+	duration := time.Since(start)
+	if duration > (d.config.ExecutionTimeout / 2) {
+		d.logger.Warn("Execution took more than 50% of the timeout", zap.Duration("duration", duration))
 		return
 	}
 }

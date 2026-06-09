@@ -2,11 +2,11 @@ package daemon
 
 import (
 	"context"
-	"github.com/TicketsBot/category-update-producer/internal/config"
-	"github.com/TicketsBot/common/model"
-	"github.com/TicketsBot/common/rpc"
-	rpcmodel "github.com/TicketsBot/common/rpc/model"
-	"github.com/TicketsBot/database"
+	"github.com/TicketsBot-cloud/category-update-producer/internal/config"
+	"github.com/TicketsBot-cloud/common/model"
+	"github.com/TicketsBot-cloud/common/rpc"
+	rpcmodel "github.com/TicketsBot-cloud/common/rpc/model"
+	"github.com/TicketsBot-cloud/database"
 	"go.uber.org/zap"
 	"time"
 )
@@ -96,7 +96,7 @@ func (d *Daemon) RunOnce() {
 			newCategoryId = *panel.PendingCategory
 		}
 
-		if err := d.rpc.ProduceSyncJson(ctx, d.config.Kafka.Topic, rpcmodel.TicketStatusUpdate{
+		if err := d.rpc.ProduceSyncJson(ctx, d.config.Streams.CategoryUpdateStream, rpcmodel.TicketStatusUpdate{
 			Ticket: rpcmodel.Ticket{
 				GuildId: ticket.GuildId,
 				Id:      ticket.TicketId,
@@ -104,7 +104,7 @@ func (d *Daemon) RunOnce() {
 			ChannelId:     *ticket.ChannelId,
 			NewCategoryId: newCategoryId,
 		}); err != nil {
-			d.logger.Error("Failed to send message to Kafka", zap.Error(err))
+			d.logger.Error("Failed to send category update", zap.Error(err))
 			continue
 		}
 

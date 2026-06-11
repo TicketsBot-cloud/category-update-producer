@@ -23,10 +23,6 @@ type Config struct {
 		Addr     string `env:"REDIS_ADDR" envDefault:"localhost:6379"`
 		Password string `env:"REDIS_PASSWORD"`
 	}
-
-	Streams struct {
-		CategoryUpdateStream string `env:"STREAMS_CATEGORY_UPDATE_STREAM" envDefault:"stream:rpc:categoryupdate"`
-	}
 }
 
 func LoadFromEnv() (Config, error) {

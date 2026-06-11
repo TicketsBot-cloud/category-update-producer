@@ -96,7 +96,7 @@ func (d *Daemon) RunOnce() {
 			newCategoryId = *panel.PendingCategory
 		}
 
-		if err := d.rpc.ProduceSyncJson(ctx, d.config.Streams.CategoryUpdateStream, rpcmodel.TicketStatusUpdate{
+		if err := d.rpc.ProduceSyncJson(ctx, "stream:rpc:categoryupdate", rpcmodel.TicketStatusUpdate{
 			Ticket: rpcmodel.Ticket{
 				GuildId: ticket.GuildId,
 				Id:      ticket.TicketId,

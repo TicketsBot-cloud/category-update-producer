@@ -1,5 +1,9 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Masterminds/semver/v3 v3.1.1/go.mod h1:VPu/7SZ7ePZ3QOrcuXROw5FAcLl4a0cBrbBpGY/8hQs=
+github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01 h1:BTBphQxBilbCjiNUYHd67kG5yCdEQ9YRAvzRBxOgjkA=
+github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01/go.mod h1:IA3watwJMLySOt5tsO5GPwAsHAFw6x9aqchxNWUqlog=
+github.com/TicketsBot-cloud/database v0.0.0-20260423165031-495c2e8a5bc7 h1:35PmSSlrSN+DOLNEnkRw4vSg1qxnnlEKtMlOaOUjMOQ=
+github.com/TicketsBot-cloud/database v0.0.0-20260423165031-495c2e8a5bc7/go.mod h1:HQXAgmNSm7/FmBYwcsa6qpZqMrDhbLoEl+AyqFQ+RwY=
 github.com/TicketsBot-cloud/gdl v0.0.0-20260306134952-cccb0116fef6 h1:ucG0xLPt7xixW7/LvL0hXDBDouDRS1Nf+77qP8iJ/X0=
 github.com/TicketsBot-cloud/gdl v0.0.0-20260306134952-cccb0116fef6/go.mod h1:CdwBR2egPtxUXjD2CgC9ZwfuB8dz9HPePM8nuG6dt7Y=
 github.com/caarlos0/env/v11 v11.2.2 h1:95fApNrUyueipoZN/EhA8mMxiNxrBwDa+oAZrMWl3Kg=

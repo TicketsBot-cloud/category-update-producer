@@ -2,12 +2,12 @@ module github.com/TicketsBot-cloud/category-update-producer
 
 go 1.22.0
 
-replace github.com/TicketsBot-cloud/common => ../common
+//replace github.com/TicketsBot-cloud/common => ../common
 
-replace github.com/TicketsBot-cloud/database => ../database
+//replace github.com/TicketsBot-cloud/database => ../database
 
 require (
-	github.com/TicketsBot-cloud/common v0.0.0-20260412182419-83b9a6ea08e7
+	github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01
 	github.com/TicketsBot-cloud/database v0.0.0-20260423165031-495c2e8a5bc7
 	github.com/caarlos0/env/v11 v11.2.2
 	github.com/getsentry/sentry-go v0.21.0

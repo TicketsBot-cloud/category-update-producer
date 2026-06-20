@@ -3,19 +3,21 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/TicketsBot/category-update-producer/internal/config"
-	"github.com/TicketsBot/category-update-producer/internal/daemon"
-	"github.com/TicketsBot/common/observability"
-	"github.com/TicketsBot/common/rpc"
-	"github.com/TicketsBot/database"
-	"github.com/getsentry/sentry-go"
-	"github.com/jackc/pgx/v4/pgxpool"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/TicketsBot-cloud/category-update-producer/internal/config"
+	"github.com/TicketsBot-cloud/category-update-producer/internal/daemon"
+	"github.com/TicketsBot-cloud/common/observability"
+	"github.com/TicketsBot-cloud/common/rpc"
+	"github.com/TicketsBot-cloud/database"
+	"github.com/getsentry/sentry-go"
+	"github.com/go-redis/redis/v8"
+	"github.com/jackc/pgx/v4/pgxpool"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 func main() {
@@ -64,11 +66,22 @@ func main() {
 
 	logger.Info("Database connected.")
 
+	logger.Info("Connecting to Redis...")
+	redisClient := redis.NewClient(&redis.Options{
+		Addr:     config.Redis.Addr,
+		Password: config.Redis.Password,
+	})
+	if err := redisClient.Ping(context.Background()).Err(); err != nil {
+		logger.Fatal("Failed to connect to Redis", zap.Error(err))
+		return
+	}
+	logger.Info("Redis connected")
+
 	logger.Info("Starting RPC client")
 	rpcClient, err := rpc.NewClient(
 		logger.With(zap.String("service", "rpc-client")),
 		rpc.Config{
-			Brokers: config.Kafka.Brokers,
+			Redis: redisClient,
 		},
 		nil,
 	)

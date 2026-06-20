@@ -19,10 +19,10 @@ type Config struct {
 		Uri string `env:"URI,required"`
 	} `envPrefix:"DATABASE_"`
 
-	Kafka struct {
-		Brokers []string `env:"BROKERS,required" envSeparator:","`
-		Topic   string   `env:"TOPIC,required"`
-	} `envPrefix:"KAFKA_"`
+	Redis struct {
+		Addr     string `env:"REDIS_ADDR" envDefault:"localhost:6379"`
+		Password string `env:"REDIS_PASSWORD"`
+	}
 }
 
 func LoadFromEnv() (Config, error) {

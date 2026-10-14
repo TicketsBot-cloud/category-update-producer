@@ -1,9 +1,7 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Masterminds/semver/v3 v3.1.1/go.mod h1:VPu/7SZ7ePZ3QOrcuXROw5FAcLl4a0cBrbBpGY/8hQs=
-github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01 h1:BTBphQxBilbCjiNUYHd67kG5yCdEQ9YRAvzRBxOgjkA=
-github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01/go.mod h1:IA3watwJMLySOt5tsO5GPwAsHAFw6x9aqchxNWUqlog=
-github.com/TicketsBot-cloud/database v0.0.0-20260423165031-495c2e8a5bc7 h1:35PmSSlrSN+DOLNEnkRw4vSg1qxnnlEKtMlOaOUjMOQ=
-github.com/TicketsBot-cloud/database v0.0.0-20260423165031-495c2e8a5bc7/go.mod h1:HQXAgmNSm7/FmBYwcsa6qpZqMrDhbLoEl+AyqFQ+RwY=
+github.com/TicketsBot-cloud/common v0.0.0-20260905165836-38e4090764a4 h1:zcPcJ+03xW9qalqzqllM6j0ZPdhuL+mrtGw8woLrAMo=
+github.com/TicketsBot-cloud/common v0.0.0-20260905165836-38e4090764a4/go.mod h1:yL+VPSYNVK5gxUkA+fbb0WdTjGfWXnr7ScfL0rwk29g=
 github.com/TicketsBot-cloud/gdl v0.0.0-20260306134952-cccb0116fef6 h1:ucG0xLPt7xixW7/LvL0hXDBDouDRS1Nf+77qP8iJ/X0=
 github.com/TicketsBot-cloud/gdl v0.0.0-20260306134952-cccb0116fef6/go.mod h1:CdwBR2egPtxUXjD2CgC9ZwfuB8dz9HPePM8nuG6dt7Y=
 github.com/caarlos0/env/v11 v11.2.2 h1:95fApNrUyueipoZN/EhA8mMxiNxrBwDa+oAZrMWl3Kg=
@@ -151,8 +149,9 @@ github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
-github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
+github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
+github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 github.com/zenazn/goji v0.9.0/go.mod h1:7S9M489iMyHBNxwZnk9/EHS098H4/F6TATF2mIxtB1Q=
 go.uber.org/atomic v1.3.2/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
 go.uber.org/atomic v1.4.0/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
